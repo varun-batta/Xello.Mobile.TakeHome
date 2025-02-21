@@ -27,13 +27,13 @@ $ npx cap run android
 
 Your challenge, should you choose to accept it, is to take this wonderfully robust web application, and progressively enhance it in order to optimize the mobile experience.
 
-- [ ] on iOS, ensure the header rests below the notch
-- [ ] ensure there is no zoom when interacting with fields
-- [ ] organize the different lists so that in a mobile form factor they appear one above the other (responsive or adaptive approach)
-- [ ] add a tap gesture to the **row** in order to toggle the todo
-- [ ] add long press gesture or a slide gesture to the rows in order to prompt the user to delete a given task
-- [ ] when creating a todo for a given section, allow the user to add a photo from the device library
-- [ ] add a button to the top right in the header to create a new todo list. Use a modal interface to achieve this
+- [x] on iOS, ensure the header rests below the notch
+- [x] ensure there is no zoom when interacting with fields
+- [x] organize the different lists so that in a mobile form factor they appear one above the other (responsive or adaptive approach)
+- [x] add a tap gesture to the **row** in order to toggle the todo
+- [x] add long press gesture or a slide gesture to the rows in order to prompt the user to delete a given task
+- [x] when creating a todo for a given section, allow the user to add a photo from the device library
+- [x] add a button to the top right in the header to create a new todo list. Use a modal interface to achieve this
 
 # Note
 - will be testaing against iPhone 15 simulator
