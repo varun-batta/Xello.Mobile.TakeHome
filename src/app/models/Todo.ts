@@ -4,5 +4,6 @@ export type Todo = {
   id: number;
   title: string;
   complete: boolean;
-  type: TodoTypes;
+  type: string;
+  imgFileName: string;
 };

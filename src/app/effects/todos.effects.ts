@@ -23,12 +23,13 @@ export class TodosEffects {
     addTodos$ = createEffect(() => this.actions$.pipe(
         ofType(add),
         withLatestFrom(this.store.select((state: State) => state.todos.todos.length)),
-        map(([{ todo, todoType }, numTodos]) => {
+        map(([{ todo, todoType, imgFileName }, numTodos]) => {
             return {
                 id: numTodos + 1,
                 title: todo,
                 complete: false,
-                type: todoType 
+                type: todoType,
+                imgFileName,
             };
         }),
         withLatestFrom(this.store.select((state: State) => state.todos.todos)),

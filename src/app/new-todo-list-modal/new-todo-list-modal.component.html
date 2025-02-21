@@ -1,0 +1,22 @@
+<div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form (submit)="addToDoList()">
+        <div>
+          <p>
+            New Todo Type
+          </p>
+          <input
+            type="text"
+            [(ngModel)]="newTodoList"
+            name="newTodoList"
+          />
+          <button
+            type="submit"
+          >
+          ✔️
+          </button>
+        </div>
+      </form>
+    </div>
+</div>

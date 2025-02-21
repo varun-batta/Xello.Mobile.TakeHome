@@ -8,12 +8,12 @@ export const selectTodos = (state: State) => {
     return state.todos;
 };
 
-export const selectTodosByType = (todoType: TodoTypes) => createSelector(
+export const selectTodosByType = (todoType: string) => createSelector(
   selectTodos,
   (state: TodoState) => state.todos.filter(x => x.type === todoType) 
 );
 
-export const selectTodoCountByType = (todoType: TodoTypes) => createSelector(
+export const selectTodoCountByType = (todoType: string) => createSelector(
   selectTodosByType(todoType),
   (todos) => todos.filter(x => !x.complete).length
 );

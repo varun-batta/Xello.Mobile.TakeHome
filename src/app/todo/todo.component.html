@@ -1,5 +1,5 @@
 <div>
-  <div >
+  <div (click)="toggleComplete.emit(todo)" (touchstart)="swipe($event, 'start')" (touchend)="swipe($event, 'end')">
     <div class="form-check">
       <input
         class="form-check-input"
@@ -8,6 +8,10 @@
         id="{{ todo?.id }}"
         [checked]="todo?.complete"
         (click)="toggleComplete.emit(todo)"
+      />
+
+      <img
+        src="{{ todo?.imgFileName }}"
       />
 
       <label class="form-check-label" for="{{ todo?.id }}">
@@ -19,5 +23,9 @@
         </span>
       </label>
     </div>
+  </div>
+  <div *ngIf="shouldShowActions">
+    <button>Delete?</button>
+    <button (click)="hideActions()">Cancel</button>
   </div>
 </div>

@@ -1,8 +1,10 @@
-<div class="grid-container">
-    <div>
-        <app-todo-list type="personal" />
+<div>
+    <div class="grid-container" *ngFor="let type of types;">
+        <div>
+            <app-todo-list type="{{type}}" />
+        </div>
     </div>
-    <div>
-        <app-todo-list type="work" />
+    <div #modalContainer style="display: none">
+        <new-app-todo-list-modal (addTodoList)="addTodoList($event)" />
     </div>
 </div>

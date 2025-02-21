@@ -18,7 +18,7 @@ import { TodoTypes } from '../models/TodoTypes';
   styleUrl: './todo-list.component.css',
 })
 export class TodoListComponent implements OnInit {
-  @Input() type!: TodoTypes;
+  @Input() type!: string;
   todos$!: Observable<Todo[]>;
   numTodos$!: Observable<number>;
 
@@ -35,7 +35,7 @@ export class TodoListComponent implements OnInit {
     this.store.dispatch(toggle({ id: todo.id }));
   }
 
-  addTodo(newTodo: string) {
-    this.store.dispatch(add({ todo: newTodo, todoType: this.type }));
+  addTodo(todo: {newTodo: string, newTodoImgFileName: string}) {
+    this.store.dispatch(add({ todo: todo.newTodo, todoType: this.type, imgFileName:  todo.newTodoImgFileName }));
   }
 }

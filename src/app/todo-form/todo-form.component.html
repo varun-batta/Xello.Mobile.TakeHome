@@ -7,6 +7,7 @@
           [(ngModel)]="newTodo"
           name="newTodo"
         />
+        <input type="file" class="file-upload" (change)="onImgSelection($event)">
         <button
           type="submit"
         >
